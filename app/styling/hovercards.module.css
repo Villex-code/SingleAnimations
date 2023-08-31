@@ -4,7 +4,7 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
   display: flex;
-  height: 100vh;
+  height: 200vh;
   justify-content: center;
   margin: 0px;
   overflow: hidden;
@@ -24,7 +24,7 @@
   border-radius: 10px;
   cursor: pointer;
   display: flex;
-  height: 260px;
+  height: 400px;
   flex-direction: column;
   position: relative;
   width: 300px;
@@ -82,16 +82,16 @@
   position: absolute;
   z-index: 2;
   overflow: hidden;
+  background-color: transparent;
 }
 
 .innerImageWrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
   border-radius: inherit;
   overflow: hidden;
   filter: grayscale(100%);
   transition: filter 300ms;
+  background-color: transparent;
 }
 
 .card:hover .innerImageWrapper {
@@ -101,5 +101,63 @@
 .textBetween {
   display: flex;
   justify-content: space-between;
-  width: 90%; /* Make sure it takes up the full width of the card */
+  width: 100%; /* Make sure it takes up the full width of the card */
+}
+
+/* ... Existing styles ... */
+
+.blurredImage {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: blur(10px);
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+.card:hover .blurredImage {
+  opacity: 1;
+}
+
+.topContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.bottomContainer {
+  padding: 10px; /* Add some padding around text */
+}
+
+.blurredImageWrapper {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .blurredImageWrapper {
+  opacity: 1;
+}
+
+/* Image Style */
+.actualImage {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 270px;
+  height: 270px;
+  z-index: 2;
+  border-radius: 0.25rem;
+}
+
+.bottomContainer {
+  position: relative;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+
+  /* ...other styles if needed... */
 }
