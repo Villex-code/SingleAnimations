@@ -62,12 +62,12 @@ const HoverCards: React.FC = () => {
               <div className={styles.bottomContainer}>
                 <div className={`${styles.textBetween} mt-2`}>
                   <p>
-                    <b>{data.name}</b>
+                    <b className="text-white">{data.name}</b>
                   </p>
                   <p>{data.at}</p>
                 </div>
                 <div className={styles.textBetween}>
-                  <p>{data.role}</p>
+                  <p className="text-white">{data.role}</p>
                   <p>{data.country}</p>
                 </div>
               </div>
